@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+
+# Large, generated synthetic datasets (regenerate with python -m src.run_analysis)
+data/events.csv
+data/game_economy.sqlite
+
+# Local / editor artifacts
+.env
+.env.*
+*.log

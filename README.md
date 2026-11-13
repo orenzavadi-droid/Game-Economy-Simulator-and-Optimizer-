@@ -18,7 +18,7 @@
 | Accounting checks | Every wallet reconciles to initial coins plus ledger transactions | `sql/04_wallet_reconciliation.sql` |
 | Optimization | 27 parameter combinations with constraints and Pareto analysis | `src/optimize.py` |
 | Robustness checks | Separate 4-seed holdout, assumption stress tests, and archetypes | `data/optimizer_validation_summary.csv` |
-| Storytelling | Self-contained offline dashboard, Excel scorecard, decision memo | `reports/` |
+| Storytelling | Browser-viewable interactive dashboard, Excel scorecard, decision memo | `reports/` |
 | Testing | 20 automated checks at release | `tests/` |
 
 ## Business question
@@ -64,7 +64,7 @@ Read the [decision memo](reports/decision_memo.md) for a full discussion of trad
 
 ## Dashboards and artifacts
 
-**1. Interactive dashboard — offline HTML:** Open [`reports/interactive_dashboard.html`](reports/interactive_dashboard.html) in a browser. Includes four sections: economy trends, optimization frontier, personas and archetypes, and model stress tests. Plotly is bundled so an internet connection is unnecessary.
+**1. Interactive dashboard — HTML:** Open [`reports/interactive_dashboard.html`](reports/interactive_dashboard.html) in a browser. Includes four sections: economy trends, optimization frontier, personas and archetypes, and model stress tests. Charts load Plotly from a public CDN, so an internet connection is required to display interactive plots.
 
 **2. Excel analysis workbook:** Open [`reports/Economy_Scenario_Workbook.xlsx`](reports/Economy_Scenario_Workbook.xlsx). Contains a formula-driven executive scorecard, original scenario results, the 27 candidates, persona comparisons, two daily trend charts, and ledger audit summary. **The Excel sheet is a snapshot**; changing spreadsheet cells does not run the Python model.
 
@@ -86,7 +86,7 @@ python -m src.build_memo
 python -m pytest -q
 ```
 
-The public GitHub bundle includes compact tables, a 1,000-event sample, the offline HTML dashboard and the Excel workbook. The full event log (`data/events.csv`, 356,357 rows) and SQLite database (`data/game_economy.sqlite`) are deliberately **not committed** because they are large, fully regenerable outputs. Run `python -m src.run_analysis` to create them. You **do not need Python just to browse the included dashboard and tables**.
+The public GitHub bundle includes compact tables, a 1,000-event sample, the HTML dashboard and the Excel workbook. The full event log (`data/events.csv`, 356,357 rows) and SQLite database (`data/game_economy.sqlite`) are deliberately **not committed** because they are large, fully regenerable outputs. Run `python -m src.run_analysis` to create them. You **do not need Python just to browse the included dashboard and tables**.
 
 Optional interactive sandbox:
 
@@ -110,7 +110,7 @@ Game-Economy-Simulator-and-Optimizer-/
 │   ├── economy.py                vectorized player simulator and event ledger
 │   ├── optimize.py               predeclared grid, guardrails, holdout validation
 │   ├── run_analysis.py           pipeline: CSV + SQLite + SQL + optimization + stresses
-│   ├── build_dashboard.py        self-contained interactive HTML
+│   ├── build_dashboard.py        interactive HTML (requires Plotly CDN)
 │   ├── build_memo.py             decision memo
 │   ├── build_workbook.py         optional Excel snapshot exporter
 │   └── run_simulation.py         quick legacy scenario-only CLI
@@ -132,7 +132,7 @@ Game-Economy-Simulator-and-Optimizer-/
 
 ## Public repository versus full local bundle
 
-This GitHub version intentionally **tracks source code, config, tests, small output tables, the Excel report, the offline dashboard and sample events**, while excluding the large generated full event CSV and SQLite database. They are rebuilt from source with `python -m src.run_analysis`. The separately packaged local V2 ZIP may contain these large outputs, but they are not required to review the work on GitHub.
+This GitHub version intentionally **tracks source code, config, tests, small output tables, the Excel report, the CDN-based interactive dashboard and sample events**, while excluding the large generated full event CSV and SQLite database. They are rebuilt from source with `python -m src.run_analysis`. The separately packaged local V2 ZIP may contain these large outputs, but they are not required to review the work on GitHub.
 
 ## Methodology and integrity
 

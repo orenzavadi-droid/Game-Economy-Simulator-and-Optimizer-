@@ -1,0 +1,8 @@
+{
+  "note": "Illustrative progression archetypes; NOT empirically calibrated genre benchmarks.",
+  "profiles": {
+    "Balanced casual": {"initial_coins": 100, "quest_reward": 26, "upgrade_base_cost": 68, "upgrade_cost_growth": 1.34},
+    "Fast progression": {"initial_coins": 125, "quest_reward": 30, "upgrade_base_cost": 60, "upgrade_cost_growth": 1.28},
+    "Scarce resources": {"initial_coins": 75, "quest_reward": 22, "upgrade_base_cost": 80, "upgrade_cost_growth": 1.42}
+  }
+}

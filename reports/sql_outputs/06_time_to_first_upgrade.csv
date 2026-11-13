@@ -1,0 +1,13 @@
+scenario,persona,installs,ever_upgraded,mean_first_upgrade_day_among_upgraders,upgrade_by_day7_per_install
+Baseline,Casual,2491,1646,2.77,0.63
+Baseline,Engaged,762,726,1.53,0.951
+Baseline,Regular,1747,1538,2.04,0.872
+Reward +25%,Casual,2491,1646,2.77,0.63
+Reward +25%,Engaged,762,726,1.53,0.951
+Reward +25%,Regular,1747,1538,2.04,0.872
+Targeted Sink +30%,Casual,2491,1646,2.77,0.63
+Targeted Sink +30%,Engaged,762,726,1.53,0.951
+Targeted Sink +30%,Regular,1747,1538,2.04,0.872
+Upgrade Price +25%,Casual,2491,1646,2.77,0.63
+Upgrade Price +25%,Engaged,762,726,1.53,0.951
+Upgrade Price +25%,Regular,1747,1538,2.04,0.872

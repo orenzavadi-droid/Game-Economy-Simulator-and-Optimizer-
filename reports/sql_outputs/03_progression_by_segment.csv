@@ -1,0 +1,13 @@
+scenario,persona,installs,upgrades_per_install,cosmetics_per_install,active_days_per_install,mean_ending_wallet_all_installs,mean_wallet_survivors
+Baseline,Casual,2491,1.247,0.137,2.9,116.29,149.6
+Baseline,Engaged,762,3.442,1.808,8.97,107.03,194.39
+Baseline,Regular,1747,2.414,0.693,5.56,104.93,158.24
+Reward +25%,Casual,2491,1.301,0.135,2.9,131.78,188.95
+Reward +25%,Engaged,762,3.777,1.803,8.98,122.64,193.52
+Reward +25%,Regular,1747,2.605,0.717,5.56,120.74,174.93
+Targeted Sink +30%,Casual,2491,1.244,0.167,2.9,115.57,145.1
+Targeted Sink +30%,Engaged,762,3.39,2.312,8.97,99.65,170.62
+Targeted Sink +30%,Regular,1747,2.379,0.918,5.56,102.2,160.76
+Upgrade Price +25%,Casual,2491,1.135,0.108,2.9,109.23,156.7
+Upgrade Price +25%,Engaged,762,3.067,1.646,8.97,107.36,173.13
+Upgrade Price +25%,Regular,1747,2.144,0.609,5.56,102.33,161.09
